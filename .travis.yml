@@ -18,3 +18,4 @@ install:
 script:
   - npm run test -- --no-watch
   - npm run build -- --prod
+  - ls
