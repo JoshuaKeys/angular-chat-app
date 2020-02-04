@@ -17,3 +17,14 @@ install:
 
 script:
   - npm run test -- --no-watch
+
+jobs:
+  include:
+    - stage: test
+      name: "Unit Tests"
+      script: 
+        - npm run test -- --no-watch
+    - stage: build
+      script: 
+        - npm run build -- --prod
+          ls 
